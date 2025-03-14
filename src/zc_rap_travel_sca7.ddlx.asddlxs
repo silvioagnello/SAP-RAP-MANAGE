@@ -1,0 +1,61 @@
+@Metadata.layer: #CORE
+annotate entity zc_rap_travel_sca7 with
+{
+
+  @UI.facet: [{ id: 'Viagem', purpose: #STANDARD, position: 10, label: 'Viagem', type: #IDENTIFICATION_REFERENCE },
+              { id: 'Voos', purpose: #STANDARD, position: 20, label: 'Reservas', type: #LINEITEM_REFERENCE, targetElement: '_Booking' }]
+
+  @UI: {
+        lineItem: [ { position: 10, label: 'TravelId' } ],
+        identification:[ { position: 10, label: 'TravelId' } ] }
+  Travel_Id;
+  @UI: {
+        lineItem: [ { position: 20, label: 'Agency_Id' } ],
+        identification:[ { position: 20, label: 'Agency_Id' } ] }
+  Agency_Id;
+  @UI: {
+        lineItem: [ { position: 30, label: 'Customer_Id' } ],
+        identification:[ { position: 30, label: 'Customer_Id' } ] }
+  Customer_Id;
+  @UI: {
+        lineItem: [ { position: 40, label: 'Begin_Date' } ],
+        identification:[ { position: 40, label: 'Begin_Date' } ] }
+  Begin_Date;
+  @UI: {
+        lineItem: [ { position: 50, label: 'End_Date' } ],
+        identification:[ { position: 50, label: 'End_Date' } ] }
+  End_Date;
+  @UI: {
+        lineItem: [ { position: 60, label: 'Booking_Fee' } ],
+        identification:[ { position: 60, label: 'Booking_Fee' } ] }
+  Booking_Fee;
+  @UI: {
+        lineItem: [ { position: 70, label: 'Total_Price' } ],
+        identification:[ { position: 70, label: 'Total_Price' } ] }
+  Total_Price;
+  @UI: {
+        lineItem: [ { position: 80, label: 'Currency_Code' } ],
+        identification:[ { position: 80, label: 'Currency_Code' } ] }
+  Currency_Code;
+  @UI: {
+        lineItem: [ { position: 90, label: 'Description' } ],
+        identification:[ { position: 90, label: 'Description' } ] }
+  Description;
+  @UI: {
+        lineItem: [ { position: 100, label: 'Overall_Status' } ],
+        identification:[ { position: 100, label: 'Overall_Status' } ] }
+  Overall_Status;
+  @UI: {
+        lineItem: [ { position: 110, label: 'Created_by' } ],
+        identification:[ { position: 110, label: 'Created_by' } ] }
+  Created_by;
+  @UI: {
+        lineItem: [ { position: 120, label: 'Created_at' } ],
+        identification:[ { position: 120, label: 'Created_at' } ] }
+  Created_at;
+  @UI: { hidden: true }
+  Last_changed_by;
+  @UI: { hidden: true }
+  Last_changed_at;
+
+}

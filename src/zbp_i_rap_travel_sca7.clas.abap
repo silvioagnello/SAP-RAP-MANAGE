@@ -1,0 +1,5 @@
+CLASS zbp_i_rap_travel_sca7 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_rap_travel_sca7.
+ENDCLASS.
+
+CLASS zbp_i_rap_travel_sca7 IMPLEMENTATION.
+ENDCLASS.

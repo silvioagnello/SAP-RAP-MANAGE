@@ -1,0 +1,54 @@
+@Metadata.layer: #CORE
+annotate entity zc_rap_book_sca7
+    with 
+{
+
+@UI.facet: [{ id: 'Viagem', purpose: #STANDARD, position: 10, label: 'Viagem', 
+              type: #IDENTIFICATION_REFERENCE },
+            { id: 'Suprimentos', purpose: #STANDARD, position: 20, label: 'Suprimento de Reservas', 
+              type: #LINEITEM_REFERENCE, targetElement: '_BookSupplement' }]
+       
+@UI: {
+        lineItem: [ { position: 10, label: 'TravelId' } ],
+        identification:[ { position: 10, label: 'TravelId' } ] }
+    Travel_Id;
+    @UI: {
+        lineItem: [ { position: 20, label: 'Booking_Id' } ],
+        identification:[ { position: 20, label: 'Booking_Id' } ] }
+    Booking_Id;
+    @UI: {
+        lineItem: [ { position: 30, label: 'Booking_Date' } ],
+        identification:[ { position: 30, label: 'Booking_Date' } ] }
+    Booking_Date;
+    @UI: {
+        lineItem: [ { position: 40, label: 'Customer_Id' } ],
+        identification:[ { position: 40, label: 'Customer_Id' } ] }
+    Customer_Id;
+    @UI: {
+        lineItem: [ { position: 50, label: 'Carrier_Id' } ],
+        identification:[ { position: 50, label: 'Carrier_Id' } ] }
+    Carrier_Id;
+    @UI: {
+        lineItem: [ { position: 60, label: 'Connection_Id' } ],
+        identification:[ { position: 60, label: 'Connection_Id' } ] }
+    Connection_Id;
+    @UI: {
+        lineItem: [ { position: 70, label: 'Flight_Date' } ],
+        identification:[ { position: 70, label: 'Flight_Date' } ] }
+    Flight_Date;
+    @UI: {
+        lineItem: [ { position: 80, label: 'Flight_Price' } ],
+        identification:[ { position: 80, label: 'Flight_Price' } ] }
+    Flight_Price;
+    @UI: {
+        lineItem: [ { position: 90, label: 'Currency_Code' } ],
+        identification:[ { position: 90, label: 'Currency_Code' } ] }
+    Currency_Code;
+    @UI: {
+        lineItem: [ { position: 100, label: 'booking_status' } ],
+        identification:[ { position: 100, label: 'booking_status' } ] }
+    booking_status;
+    @UI: { hidden: true }
+    last_changed_at;
+    
+}

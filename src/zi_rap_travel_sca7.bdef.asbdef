@@ -1,0 +1,45 @@
+managed implementation in class zbp_i_rap_travel_sca7 unique;
+strict ( 2 );
+
+define behavior for ZI_RAP_TRAVEL_SCA7 alias travel
+persistent table ZARAP_TRAVEL_SCA
+etag master Last_changed_at
+lock master
+authorization master ( instance )
+{
+  mapping for /DMO/TRAVEL_M corresponding;
+  create;
+  update;
+  delete;
+  field ( readonly ) Travel_Id;
+  association _Booking { create; }
+}
+
+define behavior for ZI_RAP_BOOKING_SCA7 alias booking
+persistent table ZARAP_BOOK_SCA7
+etag master last_changed_at
+lock dependent by _Travel
+authorization dependent by _Travel
+{
+  field ( readonly ) Travel_Id, Booking_Id;
+  mapping for /DMO/BOOKING_M corresponding;
+  update;
+  //delete;
+  //association _BookSupplement { create; }
+  association _Travel { }
+}
+
+//define behavior for ZI_RAP_BOOKSU_SCA7 alias booksuppl
+//persistent table ZI_RAP_BOOKSU_SCA7
+//etag master Last_Changed_At
+//lock dependent by _Travel
+//authorization dependent by _Travel
+//{
+//field ( readonly ) travel_id, booking_id;
+//mapping for ZI_RAP_BOOKSU_SCA7 corresponding;
+//  update;
+////  delete;
+//  field ( readonly ) BookingSupplement_Id;
+//  association _Travel { }
+////  association _Booking { }
+//}

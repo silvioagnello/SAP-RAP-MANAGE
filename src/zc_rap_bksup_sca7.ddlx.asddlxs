@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+annotate entity zc_rap_bksup_sca7 with
+{
+
+  @UI.facet: [{ id: 'Suprimento', purpose: #STANDARD, position: 10, label: 'Suprimento de Reserva',
+                type: #IDENTIFICATION_REFERENCE } ]
+
+  @UI: {
+         lineItem: [ { position: 10, label: 'TravelId' } ],
+         identification:[ { position: 10, label: 'TravelId' } ] }
+  Travel_Id;
+  @UI: {
+     lineItem: [ { position: 20, label: 'Booking_Id' } ],
+     identification:[ { position: 20, label: 'Booking_Id' } ] }
+  Booking_Id;
+  @UI: {
+     lineItem: [ { position: 30, label: 'BookingSupplement_Id' } ],
+     identification:[ { position: 30, label: 'BookingSupplement_Id' } ] }
+  BookingSupplement_Id;
+  @UI: {
+     lineItem: [ { position: 40, label: 'Supplement_Id' } ],
+     identification:[ { position: 40, label: 'Supplement_Id' } ] }
+  Supplement_Id;
+  @UI: {
+     lineItem: [ { position: 50, label: 'Price' } ],
+     identification:[ { position: 50, label: 'Price' } ] }
+  Price;
+  @UI: {
+     lineItem: [ { position: 60, label: 'Currency_Code' } ],
+     identification:[ { position: 60, label: 'Currency_Code' } ] }
+  Currency_Code;
+  @UI: { hidden: true }
+  Last_Changed_At;
+
+}

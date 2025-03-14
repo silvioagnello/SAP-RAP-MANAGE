@@ -1,0 +1,6 @@
+@EndUserText.label: 'Serv Definition Viagem'
+define service ZC_RAP_travel_SCA7 {
+  expose zc_rap_travel_sca7;
+  expose zc_rap_book_sca7;
+  expose zc_rap_bksup_sca7;
+}
